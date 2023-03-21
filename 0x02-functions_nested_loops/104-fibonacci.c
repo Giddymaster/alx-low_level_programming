@@ -1,18 +1,25 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    long long int a = 0, b = 1, c = 0;
-    int i, n = 100;
+    int prev1 = 1, prev2 = 2, current, count;
 
-    printf("%lld, %lld", a, b);
-    for (i = 2; i < n; i++)
+    printf("%d, %d, ", prev1, prev2);
+
+    for (count = 3; count <= 98; count++)
     {
-        c = a + b;
-        printf(", %lld", c);
-        a = b;
-        b = c;
+        current = prev1 + prev2;
+        printf("%d", current);
+
+        if (count < 98)
+        {
+            printf(", ");
+        }
+
+        prev1 = prev2;
+        prev2 = current;
     }
+
     printf("\n");
 
     return 0;
