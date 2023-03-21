@@ -1,29 +1,19 @@
 #include <stdio.h>
 
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main(void)
+int main()
 {
-    unsigned long int i, current, previous, temp;
+    long long int a = 0, b = 1, c = 0;
+    int i, n = 100;
 
-    current = 2;
-    previous = 1;
-
-    printf("%lu, %lu", previous, current);
-
-    for (i = 2; i < 98; i++)
+    printf("%lld, %lld", a, b);
+    for (i = 2; i < n; i++)
     {
-        temp = current;
-        current += previous;
-        previous = temp;
-
-        printf(", %lu", current);
+        c = a + b;
+        printf(", %lld", c);
+        a = b;
+        b = c;
     }
-
     printf("\n");
 
-    return (0);
+    return 0;
 }
