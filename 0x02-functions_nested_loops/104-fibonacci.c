@@ -1,26 +1,34 @@
+/**
+ * main - Entry point
+ *
+ * Description: Prints the first 98 numbers of the Fibonacci sequence,
+ * starting with 1 and 2, separated by a comma and a space
+ *
+ * Return: Always 0 (Success)
+ */
+
 #include <stdio.h>
 
 int main(void)
 {
-    int prev1 = 1, prev2 = 2, current, count;
+    int a = 1, b = 2, c, i;
 
-    printf("%d, %d, ", prev1, prev2);
+    printf("%d, %d, ", a, b);
 
-    for (count = 3; count <= 98; count++)
+    for (i = 3; i <= 98; i++)
     {
-        current = prev1 + prev2;
-        printf("%d", current);
+        c = a + b;
+        printf("%d", c);
 
-        if (count < 98)
+        if (i != 98)
         {
             printf(", ");
         }
 
-        prev1 = prev2;
-        prev2 = current;
+        a = b;
+        b = c;
     }
 
     printf("\n");
-
-    return 0;
+    return (0);
 }
