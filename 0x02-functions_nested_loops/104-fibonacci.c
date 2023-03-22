@@ -1,33 +1,26 @@
 #include <stdio.h>
 
 /**
- * fibonacci - Generate the n-th term in the Fibonacci sequence.
- * @n: The term number to generate.
- *
- * Return: The n-th term in the Fibonacci sequence.
- */
-int fibonacci(int n)
-{
-  if (n <= 1)
-    return n;
-
-  return fibonacci(n - 1) + fibonacci(n - 2);
-}
-
-/**
- * main - Print the first 10 terms in the Fibonacci sequence.
+ * main - Prints the first 100 terms of the Fibonacci sequence.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-  int i;
+        int i;
+        long int t1 = 0, t2 = 1, nextTerm;
 
-  for (i = 0; i < 10; i++)
-  {
-    printf("%d, ", fibonacci(i));
-  }
-  printf("\n");
+        for (i = 0; i < 100; i++)
+        {
+                printf("%ld", t1);
+                nextTerm = t1 + t2;
+                t1 = t2;
+                t2 = nextTerm;
+                if (i == 99)
+                        printf("\n");
+                else
+                        printf(", ");
+        }
 
-  return (0);
+        return (0);
 }
