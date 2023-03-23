@@ -2,12 +2,13 @@
 #include <stdio.h>
 
 /**
- * print_line - draws a straight line of a specified length
+ * new_line - draws a straight line of a specified length
  * @n: the length of the line to draw
  *
  * Return: void
  */
-void print_line(int n)
+void new_line(int n)
+int i;
 {
 if (n <= 0)
 {
