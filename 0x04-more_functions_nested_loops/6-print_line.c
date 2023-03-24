@@ -2,20 +2,16 @@
 #include <stdio.h>
 
 /**
- * new_line - draws a straight line of a specified length
+ * straight - draws a straight line of a specified length
  * @n: the length of the line to draw
  *
- * Return: void
+ * Return: 0
  */
-void new_line(int n)
+void straight(int n)
 int i;
-{
-if (n <= 0)
-{
-putchar('\n');
-return;
-}
 for (int i = 0; i < n; i++)
-putchar('_');
-putchar('\n');
+{
+_putchar('_');
+}
+_putchar('\n');
 }
